@@ -2,7 +2,7 @@ data = ''
 with open('test.txt', 'r') as f:
     data = f.read()
 
-max_memory = 10
+max_memory = 4
 memory = [0] * max_memory
 
 
@@ -21,11 +21,11 @@ while file_ptr < len(data):
     match character:
         case '+': memory[mem_ptr] = value + 1 if value < 255 else 0
         case '-': memory[mem_ptr] = value - 1 if value > 0 else 255
-        case '<': mem_ptr = 0 if mem_ptr < 0 else mem_ptr - 1
-        case '>': mem_ptr = max_memory - 1 if mem_ptr == max_memory else mem_ptr + 1
+        case '<': mem_ptr = 0 if mem_ptr == 0 else mem_ptr - 1
+        case '>': mem_ptr = max_memory - 1 if mem_ptr == max_memory-1 else mem_ptr + 1
         case '[':
+            # Do nothing and jump to the end of the loop
             if value == 0:
-                # Do nothing and jump to the end of the loop
                 char = ''
                 while char != ']':
                     file_ptr += 1
@@ -45,3 +45,4 @@ while file_ptr < len(data):
         file_ptr += 1
     else:
         loop = False
+print(memory)
