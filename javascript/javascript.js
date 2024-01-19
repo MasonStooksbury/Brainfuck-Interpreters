@@ -1,15 +1,10 @@
 const fs = require('fs')
 const readlinesync = require('readline-sync')
-// const readline = require('node:readline').createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-// })
-
 
 // Read in test file data
 const data = fs.readFileSync('test.txt', 'utf-8')
 
-const max_memory = 10
+const max_memory = 30000
 
 // This solution is faster than stuff like .fill() when arrays get large
 // https://stackoverflow.com/questions/1295584/most-efficient-way-to-create-a-zero-filled-javascript-array
@@ -41,7 +36,7 @@ while (file_ptr < data.length) {
             mem_ptr = mem_ptr == 0 ? 0 : mem_ptr - 1
             break
         case '>':
-            mem_ptr = mem_ptr == max_memory - 1 ? max_memory - 1 : mem_ptr + 1
+            mem_ptr = (mem_ptr == max_memory - 1) ? max_memory - 1 : mem_ptr + 1
             break
         case '[':
             if (value == 0) {
@@ -56,11 +51,10 @@ while (file_ptr < data.length) {
             break
         case ']':
             if (value == 0) {
-                console.log(loop_stack)
                 loop_stack.pop()
             } else {
                 loop = true
-                file_ptr = loop_stack[-1]
+                file_ptr = loop_stack[loop_stack.length - 1]
             }
             break
         case ',':
