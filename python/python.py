@@ -2,7 +2,7 @@ data = ''
 with open('test.txt', 'r') as f:
     data = f.read()
 
-max_memory = 4
+max_memory = 10
 memory = [0] * max_memory
 
 
