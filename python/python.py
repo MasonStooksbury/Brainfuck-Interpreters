@@ -13,12 +13,10 @@ loop_stack = []
 
 
 loop = False
-while file_ptr < len(data):
-    character = data[file_ptr]
-    
+while file_ptr < len(data):    
     value = memory[mem_ptr]
     
-    match character:
+    match data[file_ptr]:
         case '+': memory[mem_ptr] = value + 1 if value < 255 else 0
         case '-': memory[mem_ptr] = value - 1 if value > 0 else 255
         case '<': mem_ptr = 0 if mem_ptr == 0 else mem_ptr - 1

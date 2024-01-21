@@ -14,3 +14,7 @@ Now you should be able to run `cobol -V` and it should work
 Close/reopen VSCode
 Open the VSCode terminal
 `cobol -V` should run now
+
+Create a cobol.cob file with your COBOL code
+Compile with `cobol -t- cobol.cob`
+Run with `cobol` once the .exe is made

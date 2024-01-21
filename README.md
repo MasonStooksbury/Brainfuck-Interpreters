@@ -11,3 +11,22 @@ A Brainfuck interpreter is - for me - a great program to write as it includes en
 
 ## Wait, what is Brainfuck?
 Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 1993. Building off of Corrado Böhm's `P''` ("P double-prime") language, Brainfuck allows for easy input/output with the operators `,` and `.` respectively. Feel free to read more about Brainfuck [here](https://esolangs.org/wiki/Brainfuck)
+
+<br><br>
+
+## Languages so far
+- Python
+- Rust
+- JavaScript
+
+## Upcoming languages
+- Ruby
+- Lua
+- Go
+- Bash
+- Haskell
+- PHP
+- C++
+- COBOL
+- FORTRAN
+- Assembly
