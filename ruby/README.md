@@ -1,8 +1,5 @@
-# Ruby
+# Ruby (v3.3)
 
-Instructions adapted from here https://www.ruby-lang.org/en/documentation/quickstart/
+Download Ruby from [here](https://rubyinstaller.org/)
 
-
-This repo uses version 3.3
-Install from here https://rubyinstaller.org/
-Follow onscreen instructions
+Once installed, navigate into this directory and run with `ruby`
