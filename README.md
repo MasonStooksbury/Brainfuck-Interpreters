@@ -19,14 +19,14 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 - Rust
 - JavaScript
 - Ruby
+- Go
 
 ## Upcoming languages
-- Go
-- Lua
 - Bash
 - Haskell
 - PHP
 - C++
+- Lua
 - COBOL
 - FORTRAN
 - Assembly
