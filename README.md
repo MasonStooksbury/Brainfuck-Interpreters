@@ -46,8 +46,8 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
   - The whole concept of "runes"
   - When reading data from a file it will give you the data how it is represented in memory. So reading "AAA" from a file and iterating over it will yield "656565". Meaning you often have to convert things between strings, runes, etc
 - Bash
-  - Bash has always been fun, cryptic, wizardy when writing it. So I always like trying weird stuff like this to learn new tricks.
-  - Arithmetic Comparison (i.e. the (()) syntax to do stuff like (( thing < 69))) always trips me up and I often forget about it
+  - Bash has always been a fun, cryptic, and wizardly experience when writing it. So I always like trying weird stuff like this to learn new tricks.
+  - Arithmetic Comparison (i.e. the (()) syntax to do stuff like (( thing < 69 ))) always trips me up and I often forget about it
 
 
 
@@ -59,7 +59,7 @@ Here is a list of things that you have to do to create an interpreter for Brainf
 - Declare an indexed array of variable size
 - Start a WHILE loop
 - Get length of a string
-- SWITCH statement (or MATCH, or an IF/ELSE ladder)
+- SWITCH statement (or MATCH, or an IF/ELSE ladder, etc)
 - Change value in array
 - Append value to the end of an array
 - Remove value from the end of an array
