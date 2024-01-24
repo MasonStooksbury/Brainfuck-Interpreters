@@ -22,10 +22,9 @@ let loop = false
 
 
 while (file_ptr < data.length) {
-    let character = data[file_ptr]
     let value = memory[mem_ptr]
 
-    switch (character) {
+    switch (data[file_ptr]) {
         case '+':
             memory[mem_ptr] = value < 255 ? value + 1 : 0
             break
@@ -66,6 +65,7 @@ while (file_ptr < data.length) {
     }
 
 
+    
     if (!loop) {
         file_ptr += 1
     } else {

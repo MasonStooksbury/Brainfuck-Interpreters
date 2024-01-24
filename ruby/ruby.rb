@@ -1,6 +1,6 @@
 data = File.open('test.txt').read
 
-max_memory = 10
+max_memory = 30000
 memory = Array.new(max_memory){|e| e = 0 }
 
 mem_ptr = 0
@@ -45,6 +45,8 @@ while file_ptr < data.length
     when '.'
         puts "#{memory[mem_ptr].chr}"
     end
+    
+
     
     if should_loop == false
         file_ptr += 1

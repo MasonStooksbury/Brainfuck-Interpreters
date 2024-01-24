@@ -15,11 +15,9 @@ fn main() {
     let mut should_loop: bool = false;
 
     while file_ptr < data.len() {
-        let character = data[file_ptr];
-
         let value = memory[mem_ptr];
 
-        match character {
+        match data[file_ptr] {
             b'+' => memory[mem_ptr] = if value < 255 { value + 1 } else { 0 },
             b'-' => memory[mem_ptr] = if value > 0 { value - 1 } else { 255 },
             b'<' => mem_ptr = if mem_ptr == 0 { 0 } else { mem_ptr - 1 },
@@ -64,6 +62,8 @@ fn main() {
             _ => (),
         }
 
+
+        
         if !should_loop {
             file_ptr += 1;
         } else {

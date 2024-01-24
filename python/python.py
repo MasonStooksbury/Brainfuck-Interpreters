@@ -39,6 +39,8 @@ while file_ptr < len(data):
         case ',': memory[mem_ptr] = ord(input()[0])
         case '.': print(chr(value))
         
+
+        
     if not loop:
         file_ptr += 1
     else:
