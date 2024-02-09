@@ -23,10 +23,10 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 - Bash
 
 ## Upcoming languages
-- Haskell
-- PHP
 - C++
+- PHP
 - Lua
+- Haskell
 - COBOL
 - FORTRAN
 - Assembly

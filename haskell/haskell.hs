@@ -15,7 +15,7 @@ file_ptr = 0
 
 loop = False
 main = do
-    print thing
+    print memory[0]
 
     
 
