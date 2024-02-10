@@ -18,7 +18,8 @@ jobs:
       run: python generate_mermaid_chart.py > mermaid_chart.md
     - name: Update README
       run: |
-        sed -i '/<!-- mermaid-chart-start -->/,/<!-- mermaid-chart-end -->/c\<!-- mermaid-chart-start -->\n$(cat mermaid_chart.md)\n<!-- mermaid-chart-end -->' README.md
+        MERMAID_CONTENT=$(cat mermaid_chart.md)
+        sed -i "/<!-- mermaid-chart-start -->/,/<!-- mermaid-chart-end -->/c\\<!-- mermaid-chart-start -->\n${MERMAID_CONTENT}\n<!-- mermaid-chart-end -->" README.md
     - name: Commit and Push
       run: |
         git config --global user.name 'GitHub Actions'
