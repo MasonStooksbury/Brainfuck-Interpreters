@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 def scan_directories(exclude_dirs=None):
     if exclude_dirs is None:
-        exclude_dirs = ["in-progress", ".git", "info"]
+        exclude_dirs = ["in-progress", ".git", "info", ".github"]
     dirs = [d for d in os.listdir('.') if os.path.isdir(d) and d not in exclude_dirs]
     return dirs
 
