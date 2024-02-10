@@ -14,13 +14,16 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
-      - name: Update README.md
+      - name: Install dependencies
+        run: |
+          pip install matplotlib
+      - name: Generate Pie Chart and Update README
         run: |
           python update_readme_with_chart.py
       - name: Commit changes
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add README.md
-          git commit -m 'Automatically update README with Mermaid chart' || echo "No changes to commit"
+          git add README.md language_pie_chart.png
+          git commit -m 'Automatically update README with pie chart' || echo "No changes to commit"
           git push

@@ -1,4 +1,5 @@
 import os
+import matplotlib.pyplot as plt
 
 def scan_directories(exclude_dirs=None):
     if exclude_dirs is None:
@@ -6,14 +7,16 @@ def scan_directories(exclude_dirs=None):
     dirs = [d for d in os.listdir('.') if os.path.isdir(d) and d not in exclude_dirs]
     return dirs
 
-def generate_mermaid_chart(directories):
-    mermaid_code = "```mermaid\ngraph LR\n"
-    for directory in directories:
-        mermaid_code += f"    {directory} --> {directory}_content[\"{directory}\"]\n"
-    mermaid_code += "```\n"
-    return mermaid_code
+def generate_pie_chart(directories, output_path="language_pie_chart.png"):
+    sizes = [1 for _ in directories]  # Equal size for each directory, adjust as needed
+    plt.figure(figsize=(10, 6))
+    plt.pie(sizes, labels=directories, autopct='%1.1f%%', startangle=140)
+    plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    plt.savefig(output_path)
+    plt.close()
 
-def update_readme(mermaid_code, readme_file="README.md", start_marker="<!-- mermaid-chart-start -->", end_marker="<!-- mermaid-chart-end -->"):
+def update_readme_with_image(image_path, readme_file="README.md", start_marker="<!-- pie-chart-start -->", end_marker="<!-- pie-chart-end -->"):
+    image_markdown = f"![Language Pie Chart]({image_path})\n"
     with open(readme_file, "r", encoding="utf-8") as file:
         lines = file.readlines()
     
@@ -26,10 +29,10 @@ def update_readme(mermaid_code, readme_file="README.md", start_marker="<!-- merm
             break
     
     if start_index is not None and end_index is not None:
-        updated_content = lines[:start_index+1] + [mermaid_code] + lines[end_index:]
+        updated_content = lines[:start_index+1] + [image_markdown] + lines[end_index:]
         with open(readme_file, "w", encoding="utf-8") as file:
             file.writelines(updated_content)
 
 directories = scan_directories()
-mermaid_chart = generate_mermaid_chart(directories)
-update_readme(mermaid_chart)
+generate_pie_chart(directories)
+update_readme_with_image("path/to/your/generated/image.png")  # Update this path
