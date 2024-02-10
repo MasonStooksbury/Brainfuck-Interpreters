@@ -23,6 +23,7 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 - Bash
 
 <!-- pie-chart-start -->
+![Language Pie Chart](path/to/your/generated/image.png)
 <!-- pie-chart-end -->
 
 
