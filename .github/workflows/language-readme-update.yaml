@@ -19,7 +19,7 @@ jobs:
           pip install matplotlib
       - name: Generate Pie Chart and Update README
         run: |
-          python update_readme_with_chart.py
+          python ./info/update_readme_with_chart.py
       - name: Commit changes
         run: |
           git config --global user.name 'GitHub Actions'

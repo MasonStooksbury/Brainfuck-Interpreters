@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 def scan_directories(exclude_dirs=None):
     if exclude_dirs is None:
-        exclude_dirs = ["in-progress", ".git", "node_modules"]
+        exclude_dirs = ["in-progress", ".git", "info"]
     dirs = [d for d in os.listdir('.') if os.path.isdir(d) and d not in exclude_dirs]
     return dirs
 
@@ -35,4 +35,4 @@ def update_readme_with_image(image_path, readme_file="README.md", start_marker="
 
 directories = scan_directories()
 generate_pie_chart(directories)
-update_readme_with_image("path/to/your/generated/image.png")  # Update this path
+update_readme_with_image("./info/language_pie_chart.png")  # Update this path
