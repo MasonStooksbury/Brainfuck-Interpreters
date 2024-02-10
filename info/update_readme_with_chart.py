@@ -7,7 +7,7 @@ def scan_directories(exclude_dirs=None):
     dirs = [d for d in os.listdir('.') if os.path.isdir(d) and d not in exclude_dirs]
     return dirs
 
-def generate_pie_chart(directories, output_path="language_pie_chart.png"):
+def generate_pie_chart(directories, output_path="./info/language_pie_chart.png"):
     sizes = [1 for _ in directories]  # Equal size for each directory, adjust as needed
     plt.figure(figsize=(10, 6))
     plt.pie(sizes, labels=directories, autopct='%1.1f%%', startangle=140)
