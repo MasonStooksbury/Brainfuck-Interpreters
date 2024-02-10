@@ -19,7 +19,7 @@ jobs:
       - name: Update README
         run: |
           MERMAID_CONTENT=$(cat mermaid_chart.md)
-          sed -i "/<!-- mermaid-chart-start -->/,/<!-- mermaid-chart-end -->/c\\<!-- mermaid-chart-start -->\n${MERMAID_CONTENT}\n<!-- mermaid-chart-end -->" README.md
+          sed -i "|<!-- mermaid-chart-start -->|,|<!-- mermaid-chart-end -->|c\\<!-- mermaid-chart-start -->\n${MERMAID_CONTENT}\n<!-- mermaid-chart-end -->" README.md
       - name: Commit and Push
         run: |
           git config --global user.name 'GitHub Actions'
