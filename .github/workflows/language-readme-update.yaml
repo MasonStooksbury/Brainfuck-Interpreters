@@ -1,4 +1,4 @@
-name: Update README with Language Chart
+name: Update README with Mermaid Chart
 
 on:
   push:
@@ -10,20 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
         with:
-          node-version: '16' # Specify Node.js version
-      - name: Generate Mermaid Chart
-        run: node generate_mermaid_chart.js > mermaid_chart.md
-      - name: Update README
+          python-version: '3.12'
+      - name: Update README.md
         run: |
-          MERMAID_CONTENT=$(cat mermaid_chart.md)
-          sed -i "|<!-- mermaid-chart-start -->|,|<!-- mermaid-chart-end -->|c\\<!-- mermaid-chart-start -->\n${MERMAID_CONTENT}\n<!-- mermaid-chart-end -->" README.md
-      - name: Commit and Push
+          python update_readme_with_chart.py
+      - name: Commit changes
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
           git add README.md
-          git commit -m 'Update README with language chart' || echo "No changes to commit"
+          git commit -m 'Automatically update README with Mermaid chart' || echo "No changes to commit"
           git push
