@@ -1,11 +1,6 @@
 import os
 import matplotlib.pyplot as plt
 
-def scan_directories(exclude_dirs=None):
-    if exclude_dirs is None:
-        exclude_dirs = ["in-progress", ".git", "info", ".github"]
-    dirs = [d for d in os.listdir('.') if os.path.isdir(d) and d not in exclude_dirs]
-    return dirs
 
 def generate_pie_chart(directories, output_path="./info/language_pie_chart.png"):
     sizes = [1 for _ in directories]  # Equal size for each directory, adjust as needed
@@ -33,6 +28,6 @@ def update_readme_with_image(image_path, readme_file="README.md", start_marker="
         with open(readme_file, "w", encoding="utf-8") as file:
             file.writelines(updated_content)
 
-directories = scan_directories()
-generate_pie_chart(directories)
-update_readme_with_image("./info/language_pie_chart.png")  # Update this path
+
+generate_pie_chart(os.listdir('./languages'))
+update_readme_with_image("./info/language_pie_chart.png")
