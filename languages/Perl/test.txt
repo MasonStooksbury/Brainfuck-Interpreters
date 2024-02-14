@@ -1,0 +1,4 @@
+++> Initialize with 2
+++++++++ Initialize with 8
+<
+[>[>+<-]++++++++<-] Brute force multiply
