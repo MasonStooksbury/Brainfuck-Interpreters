@@ -20,10 +20,10 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 
 
 ## Upcoming languages
-- Elixir
 - C
 - PHP
 - Lua
+- Elixir
 - Haskell
 - COBOL
 - FORTRAN
