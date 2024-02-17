@@ -19,6 +19,7 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 ![Language Pie Chart](./info/language_pie_chart.png)
 <!-- pie-chart-end -->
 
+<br><br>
 
 ## Upcoming languages
 - C
@@ -30,25 +31,30 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 - FORTRAN
 - Assembly
 
+<br><br>
 
 ## Interesting things I learned about each language
 
 - Python
-  - todo
+  - N/A
 - Rust
-  - todo
+  - N/A
 - JavaScript
-  - todo
+  - N/A
 - Ruby
-  - todo
+  - Really easy and nice to use. Though, I do find Array initialization to be kinda wonky
 - Go
   - The whole concept of "runes"
   - When reading data from a file it will give you the data how it is represented in memory. So reading "AAA" from a file and iterating over it will yield "656565". Meaning you often have to convert things between strings, runes, etc
 - Bash
   - Bash has always been a fun, cryptic, and wizardly experience when writing it. So I always like trying weird stuff like this to learn new tricks.
   - Arithmetic Comparison (i.e. the (()) syntax to do stuff like (( thing < 69 ))) always trips me up and I often forget about it
+- C++
+  - Wayyyy easier than I expected it to be. I'm sure more complicated things would get annoying, but this wasn't nearly as bad as I was prepared for
+- Perl
+  - Feels like a weird lovechild of Python and Bash. Some things are easy and high level, but the required symbols before variable names is really annoying
 
-
+<br><br>
 
 ## General process for each language
 Here is a list of things that you have to do to create an interpreter for Brainfuck. This also doubles as a list of all the things you end up learning for every new language
@@ -69,4 +75,3 @@ Here is a list of things that you have to do to create an interpreter for Brainf
 - Printing to the console
 - Does the language have a simple +=1 syntax, or do you have to do the long version?
 - Does the language have a simple NOT operator like `!` or `not`? (This is why I do `if !loop` at the bottom of my WHILE loops rather than switch the logic and do `if loop`)
-- 
