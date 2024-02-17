@@ -8,7 +8,7 @@ public class Brainfuck {
         int mem_ptr = 0
         int file_ptr = 0
 
-        int[] loop_stack = []
+        def loop_stack = []
 
         boolean loop = false
         while (file_ptr < data.length()) {
@@ -27,9 +27,33 @@ public class Brainfuck {
                 case '>':
                     mem_ptr = mem_ptr == (max_memory - 1) ? (max_memory - 1) : mem_ptr + 1
                     break;
+                case '[':
+                    if (value == 0) {
+                        char character = '~'
+                        while (character != ']') {
+                            file_ptr++
+                            character = data[file_ptr]
+                        }
+                    } else {
+                        loop_stack.add(file_ptr + 1)
+                    }
+                    break;
+                case ']':
+                    if (value == 0) {
+                        loop_stack.removeLast()
+                    } else {
+                        loop = true
+                        file_ptr = loop_stack.last()
+                    }
+                    break;
+                case ',':
+                    def input = System.console().readLine ''
+                    memory[mem_ptr] = input[0]
+                    break;
+                case '.':
+                    System.out.print((char) memory[mem_ptr])
+                    break;
             }
-
-            System.out.println(value)
 
             if (!loop) {
                 file_ptr++
@@ -38,7 +62,6 @@ public class Brainfuck {
             }
         }
 
-        System.out.println(data)
-        System.out.println(memory)
+        System.out.println('\n' + memory)
     }
 }
