@@ -20,12 +20,12 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 <br><br>
 
 ## Upcoming languages
-- Zig
 - R
 - Kotlin
 - F#
 - C
 - D
+- Zig
 - PowerShell
 - VBA
 - VBScript

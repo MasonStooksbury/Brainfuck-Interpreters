@@ -30,10 +30,8 @@ pub fn main() !void {
     var memory: [max_memory]u8 = undefined;
     @memset(&memory, 0);
 
-    var mem_ptr = 0;
-    var file_ptr = 0;
-
-    var loop_stack = [];
+    // var mem_ptr = 0;
+    // var file_ptr = 0;
 
     // std.debug.print("File content:\n{str}\n", .{str});
 
