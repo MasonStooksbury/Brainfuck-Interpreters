@@ -59,6 +59,8 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
   - Wayyyy easier than I expected it to be. I'm sure more complicated things would get annoying, but this wasn't nearly as bad as I was prepared for
 - Perl
   - Feels like a weird lovechild of Python and Bash. Some things are easy and high level, but the required symbols before variable names is really annoying
+- Groovy
+  - I love how simple reading from a file is
 
 <br><br>
 
@@ -79,5 +81,5 @@ Here is a list of things that you have to do to create an interpreter for Brainf
 - Converting input (often a string) into the decimal representation for that given ASCII value (e.g. A -> 65)
 - Converting decimal to ASCII for printing (e.g. 65 -> A)
 - Printing to the console
-- Does the language have a simple +=1 syntax, or do you have to do the long version?
+- Does the language have a simple increment operator syntax like +=1 or ++? Or do you have to do the long version? (i.e. temp = temp + 1)
 - Does the language have a simple NOT operator like `!` or `not`? (This is why I do `if !loop` at the bottom of my WHILE loops rather than switch the logic and do `if loop`)
