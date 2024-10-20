@@ -30,7 +30,6 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 - VBA
 - VBScript
 - PHP
-- Lua
 - Elixir
 - Haskell
 - COBOL
@@ -61,6 +60,8 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
   - Feels like a weird lovechild of Python and Bash. Some things are easy and high level, but the required symbols before variable names is really annoying
 - Groovy
   - I love how simple reading from a file is
+- Lua
+  - I enjoy the syntax for getting an array's length where all I have to do is prepend the array name with #. Very convenient
 
 <br><br>
 
