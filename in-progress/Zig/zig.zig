@@ -47,4 +47,6 @@ pub fn main() !void {
     for (memory) |elem| {
         std.debug.print("{} ", .{elem});
     }
+
+    std.debug.print("\n", .{});
 }
