@@ -2,7 +2,7 @@ public class Brainfuck {
     public static void main(String[] args) {
         String data = new File('test.txt').text
 
-        int max_memory = 10
+        int max_memory = 30000
         int[] memory = [0] * max_memory
 
         int mem_ptr = 0

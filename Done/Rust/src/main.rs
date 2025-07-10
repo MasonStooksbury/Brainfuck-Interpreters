@@ -4,7 +4,7 @@ use std::io;
 fn main() {
     let data = fs::read("test.txt").expect("Failed to read in the test data file");
 
-    const MAX_MEMORY: usize = 10;
+    const MAX_MEMORY: usize = 30000;
     let mut memory = [0; MAX_MEMORY];
 
     let mut mem_ptr: usize = 0;

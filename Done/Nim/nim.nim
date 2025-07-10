@@ -1,5 +1,5 @@
 const
-  max_memory = 10
+  max_memory = 30000
 
 let
   data = readFile("test.txt")

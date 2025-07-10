@@ -5,7 +5,7 @@ use Switch;
 open my $file_handler, '<', 'test.txt' or die "Can't open file $!";
 $data = do { local $/; <$file_handler> };
 
-$max_memory = 30;
+$max_memory = 30000;
 @memory = (0) x $max_memory;
 
 $mem_ptr = 0;

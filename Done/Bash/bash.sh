@@ -1,7 +1,7 @@
 #!/bin/sh
 data=`cat test.txt`
 
-max_memory=29999
+max_memory=30000
 
 # Create an indexed array
 declare -a memory=( $(for i in $( seq 0 $max_memory ); do echo 0; done;) )
