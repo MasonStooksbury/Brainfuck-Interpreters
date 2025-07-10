@@ -25,6 +25,7 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 - Python
 - Ruby
 - Rust
+- Nim
 
 <br><br>
 
@@ -71,6 +72,11 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
   - I love how simple reading from a file is
 - Lua
   - I enjoy the syntax for getting an array's length where all I have to do is prepend the array name with #. Very convenient
+- Nim
+  - There's so much to hate about this language. The fact that I literally *can't* use tabs (the compiler straight-up won't let you), the inconsistency of colons (you put colons after every control flow and loop structure _EXCEPT_ `case` for some reason), the fact that `!` works when doing `if flump != true:` but doesn't work if you try to do `if !flump:`.
+  - That being said, once compiled, it is *fast*.
+  - I also like the block assign. It's nice that if they're going to force me to use var/let/const, I can at least organize everything into similar blocks and assign them that way
+  - It has some high-level functionality that I wasn't expecting. The fact that reading in a file is literally as easy as `let file = readFile("test.txt")` is nuts
 
 <br><br>
 

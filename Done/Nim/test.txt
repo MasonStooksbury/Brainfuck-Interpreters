@@ -1,0 +1,18 @@
+++++ Num 1
+>
++++  Num 2
+<
+
+[->+<]> Add them together
+
+>+++++   Put "48" into an address to convert to ASCII
+[>++++++++++<-]
+>--
+
+
+[-<+>]  Move 48 closer to the number from before
+<<
+[->+<]>.  Add them together and print the result
+
+
+Prints out the number 7
