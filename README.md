@@ -21,30 +21,31 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 - Groovy
 - JavaScript
 - Lua
+- Nim
 - Perl
 - Python
 - Ruby
 - Rust
-- Nim
 
 <br><br>
 
 ## Upcoming languages
-- R
-- Kotlin
-- F#
+- Assembly
 - C
+- COBOL
 - D
-- Zig
+- Elixir
+- F#
+- FORTRAN
+- Gleam
+- Haskell
+- Kotlin
+- PHP
 - PowerShell
+- R
 - VBA
 - VBScript
-- PHP
-- Elixir
-- Haskell
-- COBOL
-- FORTRAN
-- Assembly
+- Zig
 
 <br><br>
 
