@@ -1,18 +1,18 @@
-// C program to read a file using fgetc()
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 
 int main() {
-
     int max_memory = 10;
     int memory[max_memory];
 
+    // Make sure everything is zeroed-out so we don't have weird stuff in it
+    bzero(&memory, max_memory * sizeof(int));
+
     int mem_ptr = 0;
-
-
     bool loop = false;
+    int file_ptr = 0;
   
     // Opening file
     FILE *file;
@@ -53,12 +53,20 @@ int main() {
                 printf("%c", "3");
                 break;
             case ',':
-                printf("%c", "3");
+                char input;
+                scanf("%c", &input);
+                memory[mem_ptr] = input;
                 break;
             case '.':
-                printf("%c", "3");
+                printf("%c", value);
                 break;
         }
+    }
+
+    if (!loop) {
+        file_ptr++;
+    } else {
+        loop = false;
     }
 
     for (int i=0; i<10; i++) {
@@ -66,7 +74,6 @@ int main() {
     }
     printf("\n");
 
-    // Closing the file
     fclose(file);
     return 0;
 }
