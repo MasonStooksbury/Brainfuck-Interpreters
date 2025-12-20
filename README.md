@@ -26,6 +26,7 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 - Python
 - Ruby
 - Rust
+- V
 
 <br><br>
 
@@ -79,6 +80,11 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
   - That being said, once compiled, it is *fast*.
   - I also like the block assign. It's nice that if they're going to force me to use var/let/const, I can at least organize everything into similar blocks and assign them that way
   - It has some high-level functionality that I wasn't expecting. The fact that reading in a file is literally as easy as `let file = readFile("test.txt")` is nuts
+- V
+  - Every looping structure being an overloading FOR loop is an interesting design choice. Not bad, per se, just really weird
+  - I see the Go inspiration, but in terms of syntax it feels more like a lovechild of Python and Rust
+  - C interoperability, inline ASM, works for WASM, etc. This language can do a lot and is super versatile
+  - Very simple file syntax: `data := os.read_lines('test.txt')!`
 
 <br><br>
 
