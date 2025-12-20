@@ -71,6 +71,7 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
   - Wayyyy easier than I expected it to be. I'm sure more complicated things would get annoying, but this wasn't nearly as bad as I was prepared for
 - Perl
   - Feels like a weird lovechild of Python and Bash. Some things are easy and high level, but the required symbols before variable names is really annoying
+  - Also, no booleans?
 - Groovy
   - I love how simple reading from a file is
 - Lua
