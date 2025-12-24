@@ -3,16 +3,16 @@
 
 
        ENVIRONMENT DIVISION.
-           INPUT-OUTPUT SECTION.
-              FILE-CONTROL.
-              SELECT PROGRAM-FILE ASSIGN TO 'test.txt'
-              ORGANIZATION IS SEQUENTIAL.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT PROGRAM-FILE ASSIGN TO 'test.txt'
+           ORGANIZATION IS LINE SEQUENTIAL.
 
        DATA DIVISION.
        FILE SECTION.
-           FD PROGRAM-FILE.
-           01 PROGRAM-BYTE PIC X.
-               88 END-OF-PROGRAM-FILE VALUES HIGH-VALUES.
+       FD PROGRAM-FILE.
+       01 PROGRAM-BYTE PIC X.
+           88 END-OF-PROGRAM-FILE VALUES HIGH-VALUES.
 
        WORKING-STORAGE SECTION.
       * Max size of memory array is a 5 digit number
@@ -47,5 +47,7 @@
                DISPLAY MEMORY-ARR(3).
            TESTY.
                DISPLAY MEMORY-ARR(X).
+               MOVE PROGRAM-BYTE(X:1) TO CHAR.
+               DISPLAY "CHAR " X ": " CHAR.
 
        END PROGRAM COBOL-BF-INTERPRETER.

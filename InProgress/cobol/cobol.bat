@@ -2,7 +2,7 @@
 
 rem Compile a COBOL program
 
-rem are env strings already defined? (tried using () here, but it failed so goto it is
+rem are env strings already defined? (tried using () here, but it failed so goto it is)
 
 if NOT "%COB_MAIN_DIR%" == "" goto cont
 

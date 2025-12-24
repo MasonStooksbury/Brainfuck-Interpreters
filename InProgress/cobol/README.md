@@ -16,5 +16,5 @@ Open the VSCode terminal
 `cobol -V` should run now
 
 Create a cobol.cob file with your COBOL code
-Compile with `cobol -t- cobol.cob`
-Run with `cobol` once the .exe is made
+Compile with `cobol -t- cobol.cbl`
+Run with `cobol test.txt` once the .exe is made
