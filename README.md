@@ -53,12 +53,6 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 
 ## Interesting things I learned about each language
 
-- Python
-  - N/A
-- Rust
-  - N/A
-- JavaScript
-  - N/A
 - Ruby
   - Really easy and nice to use. Though, I do find Array initialization to be kinda wonky
 - Go
@@ -73,7 +67,7 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
   - Feels like a weird lovechild of Python and Bash. Some things are easy and high level, but the required symbols before variable names is really annoying
   - Also, no booleans?
 - Groovy
-  - I love how simple reading from a file is
+  - I love how simple reading from a file is (e.g. `String data = new File('test.txt').text`)
 - Lua
   - I enjoy the syntax for getting an array's length where all I have to do is prepend the array name with #. Very convenient
 - Nim
