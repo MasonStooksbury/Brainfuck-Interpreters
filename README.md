@@ -51,6 +51,11 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 
 <br><br>
 
+## Disclaimer
+This repo is more about learning new languages rather than providing well-coded Brainfuck interpreters in those languages. For that reason, some of the languages have terrible code. A great example is my C interpreter; it's pretty obvious that a person who normally uses Python tried to write C code. So take these with a grain of salt, and if you plan on *really* using them: maybe give them a once-over first.
+
+<br><br>
+
 ## Interesting things I learned about each language
 
 - Ruby
