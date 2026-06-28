@@ -33,7 +33,7 @@ Prints out the number 7
 ------------------
 ```
 
-# Skip test (when starting loop on empty section, it should skip that loop
+# Skip test (when starting loop on empty section, it should skip that loop)
 
 ```rust
 +++++>[>>>]+++

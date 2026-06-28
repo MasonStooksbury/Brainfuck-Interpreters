@@ -3,32 +3,35 @@
 #include <string.h>
 #include <stdbool.h>
 
-int endOfArray(int[] array) {
-    for (int i; i < sizeof(array); i++) {
+// Get the index of the end of the array
+int endOfArray(int array[]) {
+    for (int i = 0; i < 200; i++) {
         if (array[i] == 999) {
             return i;
         }
     }
 }
 
-int append(int[] array, element) {
+// Append an element to the end of the array
+int append(int array[], int element) {
     int end_of_array = endOfArray(array);
     array[end_of_array] = element;
     array[end_of_array + 1] = 999;
 }
 
-int pop(int[] array) {
+// Remove the last element in the array
+int pop(int array[]) {
     int end_of_array = endOfArray(array);
 
     int element = array[end_of_array - 1];
     array[end_of_array] = 0;
     array[end_of_array - 1] = 999;
 
-    return element
+    return element;
 }
 
 int main() {
-    int max_memory = 10;
+    int max_memory = 30000;
     int memory[max_memory];
 
     // Make sure everything is zeroed-out so we don't have weird stuff in it
@@ -37,22 +40,21 @@ int main() {
     int mem_ptr = 0;
     bool loop = false;
     int file_ptr = 0;
+    int original_file_ptr = 0;
     
     // I don't feel like implementing a Vector or something from scratch
-    int loop_stack[1000];
-    bzero(&loop_stack, 1000 * sizeof(int));
+    int loop_stack[200];
+    bzero(&loop_stack, 200 * sizeof(int));
+    loop_stack[0] = 999;
   
     // Opening file
     FILE *file;
 
-    // Character buffer that stores the read character
-    // till the next iteration
+    // Character buffer that stores the read character till the next iteration
     char ch;
 
     // Opening file in reading mode
     file = fopen("test.txt", "r");
-
-    printf("starting\n");
 
     if (NULL == file) {
         printf("Could not open test file\n");
@@ -60,8 +62,15 @@ int main() {
     }
 
     int value = 0;
-    while ((ch = fgetc(file)) != EOF) {
+    while (!loop) {
         value = memory[mem_ptr];
+        fseek(file, file_ptr, 0);
+
+        ch = fgetc(file);
+        
+        if (ch == EOF) {
+            break;
+        }
 
         switch (ch) {
             case '+':
@@ -78,14 +87,15 @@ int main() {
                 break;
             case '[':
                 if (value == 0) {
-                    printf("%c", "3");
-                    char thing = '';
+                    char thing = '~';
+                    original_file_ptr = file_ptr;
                     while (thing != ']') {
                         ++file_ptr;
-                        thing = 
+                        fseek(file, file_ptr, 0);
+                        thing = fgetc(file);
                     }
                 } else {
-                    append(loop_stack, ++file_ptr);
+                    append(loop_stack, file_ptr+1);
                 }
                 break;
             case ']':
@@ -93,7 +103,7 @@ int main() {
                     pop(loop_stack);
                 } else {
                     loop = true;
-                    file_ptr = loop_stack[endOfArray(loop_stack)-1]
+                    file_ptr = loop_stack[endOfArray(loop_stack)-1];
                 }
                 break;
             case ',':
@@ -105,12 +115,12 @@ int main() {
                 printf("%c", value);
                 break;
         }
-    }
-
-    if (!loop) {
-        ++file_ptr;
-    } else {
-        loop = false;
+        
+        if (!loop) {
+            ++file_ptr;
+        } else {
+            loop = false;
+        }
     }
 
     printf("\n");

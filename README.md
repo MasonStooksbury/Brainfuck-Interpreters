@@ -16,6 +16,7 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 
 ## Finished languages
 - Bash
+- C
 - C++
 - Go
 - Groovy
@@ -32,7 +33,6 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
 
 ## Upcoming languages
 - Assembly
-- C
 - COBOL
 - D
 - Elixir
@@ -80,6 +80,9 @@ Brainfuck is a Turing-complete, esoteric language created by Urban Müller in 19
   - I see the Go inspiration, but in terms of syntax it feels more like a lovechild of Python and Rust
   - C interoperability, inline ASM, works for WASM, etc. This language can do a lot and is super versatile
   - Very simple file syntax: `data := os.read_lines('test.txt')!`
+- C
+  - A little harder than C++ but ultimately not too bad. Required a little more finagling than other programs due to how I am looping over the file and getting characters.
+  - Really makes me appreciate the helper functions for arrays in other languages
 
 <br><br>
 
